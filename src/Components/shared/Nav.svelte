@@ -1,8 +1,9 @@
 <script context="module">
-    import CreateSurvey from "../CreateSurvey.svelte";
-    import Dashboard from "../Dashboard.svelte";
-    import Home from "../Home.svelte";
-    import HowToUse from "../HowToUse.svelte";
+import CreateSurvey from "../create-survey/CreateSurvey.svelte";
+
+import Home from "../home/Home.svelte";
+import HowToUse from "../home/HowToUse.svelte";
+import Dashboard from "../my-surveys/Dashboard.svelte";
 
     export const navOptionsLoggedIn = [
         { page: "Home", component: Home },
@@ -15,4 +16,5 @@
         { page: "Create Survey", component: CreateSurvey },
         { page: "Your Surveys", component: Dashboard },
     ];
+    
 </script>
