@@ -1,6 +1,17 @@
 <script lang="ts">
+    import type { Question } from "../utils/Models.svelte";
+    import AddQuestionBar from "./AddQuestionBar.svelte";
+
     let files;
     let formTitle = "";
+    let questionList: Question[] = [
+        {
+            _id: "",
+            questionType: "SA",
+            questionContent: "",
+            optionList: [],
+        },
+    ];
 </script>
 
 <div class="main">
@@ -28,7 +39,19 @@
         </div>
 
         <div class="row">
-            <div class="question-card" />
+            {#each questionList as question}
+                <div class="question-card">
+                    <div class="question-box">
+                        <AddQuestionBar bind:question />
+                    </div>
+                    <div class="tool-box">
+                        <div class="tool-row">Change Question Type</div>
+                        <div class="tool-row">Move Up</div>
+                        <div class="tool-row">Move Down</div>
+                        <div class="tool-row">Add Another Question</div>
+                    </div>
+                </div>
+            {/each}
         </div>
     </div>
 </div>
