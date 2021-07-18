@@ -11,18 +11,24 @@
                     {formTitle}
                 </div>
                 <div class="upload-button">
-                    <input type="file" title="Upload Custom Banner" bind:files />
+                    <input
+                        type="file"
+                        title="Upload Custom Banner"
+                        bind:files
+                    />
                 </div>
             </div>
         </div>
         <div class="row">
-            <input type="text" bind:value={formTitle} placeholder="Enter your form title..." />
+            <input
+                type="text"
+                bind:value={formTitle}
+                placeholder="Enter your form title..."
+            />
         </div>
 
         <div class="row">
-            <div class="question-card">
-                
-            </div>
+            <div class="question-card" />
         </div>
     </div>
 </div>
@@ -32,7 +38,7 @@
         width: 100%;
     }
 
-    .row{
+    .row {
         background-color: white;
         border-radius: 15px;
         margin-top: 20px;
@@ -61,7 +67,8 @@
         box-shadow: 0 2px 4px 0 black;
     }
 
-    .upload-button, .form-title {
+    .upload-button,
+    .form-title {
         padding-top: 10px;
         /* width: 250px; */
         text-align: center;
@@ -77,10 +84,16 @@
         padding-top: 15px;
     }
 
-    .row input {
+    .row input,
+    .row input:hover,
+    .row input:active {
         border: none;
         width: 80%;
         border-bottom: 2px solid teal;
         margin-left: 10px;
+    }
+
+    input:focus {
+        outline: none;
     }
 </style>

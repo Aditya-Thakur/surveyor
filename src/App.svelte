@@ -2,7 +2,7 @@
 	import {
 		navOptionsLoggedIn,
 		navOptionsLoggedOut,
-	} from "./shared/Nav.svelte";
+	} from "./Components/shared/Nav.svelte";
 	let selected = navOptionsLoggedIn[2];
 	let intSelected = 2;
 	function changeComponent(id) {
