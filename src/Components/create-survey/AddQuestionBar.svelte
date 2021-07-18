@@ -1,11 +1,12 @@
 <script lang="ts">
-    import type { Question } from "../utils/Models.svelte";
+    import { environment } from "../../store";
+import type { Question } from "../utils/Models.svelte";
     export let question: Question;
 </script>
 
 <div class="card">
     <div class="q-row">
-        Question Type - {question.questionType} 
+        Question Type - {environment.questionCategories[question.questionType].name} 
     </div>
     <div class="q-row">
         <input type="text" placeholder="Enter question" bind:value="{question.questionContent}">
@@ -16,7 +17,6 @@
         {/each}
     </div>
 </div>
-
 
  <style>
     .q-row input,

@@ -119,4 +119,19 @@
     input:focus {
         outline: none;
     }
+
+    .question-card {
+        display: flex;
+        justify-content: start;
+    }
+
+    .question-box {
+        background-color: aqua;
+        width: 90%;
+    }
+
+    .tool-box {
+        background-color: lightsalmon;
+        width: 10%;
+    }
 </style>
